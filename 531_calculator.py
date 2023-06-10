@@ -60,25 +60,23 @@ def lift_calculator(training_max, last_weight, last_reps,
     second_set_calc = int(training_max * second_set_perct)
     third_set_calc = int(training_max * third_set_perct)
 
-    print(
-        f"1 x {first_set_calc} x {first_set_reps} reps",
-        f"{plate_calculator(first_set_calc)}")
-    print(
-        f"1 x {second_set_calc} x {second_set_reps} reps",
-        f"{plate_calculator(second_set_calc)}")
+    print(f"1 x {first_set_calc} x {first_set_reps} reps",
+          f"{plate_calculator(first_set_calc)}")
+    print(f"1 x {second_set_calc} x {second_set_reps} reps",
+          f"{plate_calculator(second_set_calc)}")
 
     if is_main:
         last_cycle_one_rep_max = rep_max(last_weight, last_reps)
 
-        print(
-            f"1 x {third_set_calc} x {third_set_reps} or more reps",
-            f"{plate_calculator(third_set_calc)}")
-        print(
-            f"\nEstimated 1RM for last cycle's 3rd week top set: {last_cycle_one_rep_max:.0f}")
-        print(
-            f"Estimated 1RM for this week's top set: {rep_max(third_set_calc, third_set_reps):.0f}")
-        print(
-            f"Estimated reps to match last cycle's 1RM for the 3rd week top set: {reps_to_one_rep_max(last_cycle_one_rep_max, third_set_calc):.2f}")
+        print(f"1 x {third_set_calc} x {third_set_reps} or more reps",
+              f"{plate_calculator(third_set_calc)}")
+        print()
+        print("Estimated 1RM for last cycle's 3rd week top set:",
+              f"{last_cycle_one_rep_max:.0f}")
+        print("Estimated 1RM for this week's top set:",
+              f" {rep_max(third_set_calc, third_set_reps):.0f}")
+        print("Estimated reps to match last cycle's 1RM for the 3rd week top set:",
+              f"{reps_to_one_rep_max(last_cycle_one_rep_max, third_set_calc):.2f}")
     else:
         print(
             f"1 x {third_set_calc} x {third_set_reps} reps",
